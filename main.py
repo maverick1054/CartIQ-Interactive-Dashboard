@@ -7,6 +7,9 @@ from module1_eda import render_module1
 from module2_regression import render_module2
 from module3_trees_reg import render_module3
 from module4_ensemble import render_module4
+from module5_placement import render_module5
+from module6_evaluation import render_module6
+from module7_production import render_module7
 
 # -------------------------------------------------------------
 # PAGE CONFIGURATION
@@ -200,7 +203,10 @@ selected_module = st.sidebar.radio(
         "📦 Module 1: Data Cleaning & EDA",
         "📈 Module 2: Linear & Logistic Regression",
         "🌲 Module 3: Regularization & Decision Trees",
-        "⚡ Module 4: Bagging & Boosting Ensembles"
+        "⚡ Module 4: Bagging & Boosting Ensembles",
+        "🎯 Module 5: Placement Prediction & PCA Analytics",
+        "📊 Module 6: Model Evaluation, Calibration & CV (M5)",
+        "🚀 Module 7: Production API & Drift Monitoring (M6)"
     ],
     index=0
 )
@@ -247,4 +253,10 @@ else:
         render_module3(filtered_cust, filtered_order)
     elif selected_module == "⚡ Module 4: Bagging & Boosting Ensembles":
         render_module4(filtered_cust, filtered_order)
+    elif selected_module == "🎯 Module 5: Placement Prediction & PCA Analytics":
+        render_module5(filtered_cust, filtered_order)
+    elif selected_module == "📊 Module 6: Model Evaluation, Calibration & CV (M5)":
+        render_module6(filtered_cust, filtered_order)
+    elif selected_module == "🚀 Module 7: Production API & Drift Monitoring (M6)":
+        render_module7(filtered_cust, filtered_order)
 
